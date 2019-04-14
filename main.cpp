@@ -1,25 +1,24 @@
 #include <iostream>
 #include "TNumber.h"
+#include "snum.h"
+#include <time.h>
 
 int main() {
-//    std::cout << "Hello, World!" << std::endl;
-//    return 0;
-    std::cout << "start" << std::endl;
-    TNumber x(1);
-    TNumber y(3);
-    TNumber z = x + y;
-    z.print();
-    std::cout << "end" << std::endl;
 
-    int a = 100;
-    int b;
+    snum a, b, c;
+    a.setPercision(SIGNED, 10, 4, ROUND);
+    a = 3.231;
+    a.print();
+    b = 2.4533;
+    b.setPercision(SIGNED, 12, 5, TRUNC);
+    b.print();
+    c.setPercision(SIGNED, 12, 2, ROUND);
+    c = a + b;
+    c.print();
 
-    b = a;
-    while (b)
-    {
-        cout<< (b & 0x0001);
-        b >>= 1;
-    }
-    cout<<endl;
+    snum *x = snum::buildArray(100, SIGNED, 10, 2, ROUND);
+    snum y[100];
+    snum::fillPersision(y, 100, SIGNED, 10, 2, ROUND);
+
     return 0;
 }

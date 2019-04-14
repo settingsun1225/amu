@@ -4,12 +4,12 @@
 
 #include "TNumber.h"
 
-int main() {
-    std::cout << "start" << std::endl;
-    TNumber x = new TNumber(1);
-    TNumber y = new TNumber(3);
-    TNumber z = x + y;
-    z.print();
-    std::cout << "end" << std::endl;
-    return 0;
-}
+//int main() {
+//    std::cout << "start" << std::endl;
+//    TNumber x(1);
+//    TNumber y(3);
+//    TNumber z = x + y;
+//    z.print();
+//    std::cout << "end" << std::endl;
+//    return 0;
+//}
